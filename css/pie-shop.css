@@ -1,100 +1,151 @@
-* {
-  font-family: Helvetica, "Helvetica-Neue", Arial, sans-serif;
-  box-sizing: border-box;
-}
-
-html,
 body {
-  margin: 0;
-}
-
-body {
-  background-color: #e6e4d9;
-  background-image: url("images/pattern.png");
-}
-
-nav,
-main {
-  background: white;
-  padding: 1em;
-  border: 2px solid #23cfa7;
-  border-bottom: 5px solid #23cfa7;
-  border-radius: 0.5em;
+  background-image: url(images/pattern.png);
+  font-family: sans-serif;
+  margin: 0; /* Restablece el margen predeterminado del cuerpo */
 }
 
 header {
-  background: #23cfa7;
-  height: 80px;
-  padding: auto;
-}
-
-aside {
+  background-color: #d0c0e0;
+  color: white;
+  padding: 1em;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; /* Ancho completo */
+  margin: 0; /* Margen superior e inferior a 0 */
+  position: fixed; /* Fija el encabezado */
+  top: 0; /* Posiciona en la parte superior */
+  left: 0; /* Posiciona en el lado izquierdo */
+  z-index: 10; /* Asegura que el encabezado esté encima del contenido */
 }
 
-aside img {
-  max-width: 100%;
-  padding: 0 1em;
-}
-
-aside p {
-  text-align: center;
+.logo {
+  width: 100px;
+  height: 100px;
 }
 
 nav ul {
   list-style: none;
-  line-height: 1.5em;
+  margin: 0;
   padding: 0;
+  display: flex;
 }
 
-main h1 {
-  font-family: "Patua One", cursive;
-  margin-top: 0.25em;
+nav li {
+  margin-right: 2em;
 }
 
-main img {
-  max-width: 100%;
-}
-
-.cta {
-  display: block;
+nav a {
   color: white;
-  margin: 1.5em auto;
-  font-family: "Patua One", cursive;
-  font-weight: bold;
-  width: 15em;
-  border-radius: 2em;
-  border-bottom: 4px solid black;
-  text-align: center;
   text-decoration: none;
-  font-size: 1em;
-  padding: 0.75em;
-  background: #23cfa7;
 }
 
-body img {
-  object-fit: cover;
-  max-width: 100%;
+#titulo {
+  position: absolute;
+  top: 150px; /* Posiciona el título debajo del encabezado */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px; /* Tamaño de la letra del título */
+  color: #a593c2;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 400px; /* Espacio entre el encabezado y la imagen */
+}
+.hero-content {
+  text-align: center;
+}
+.hero-image {
+  width: 90%;
+  margin-top: 20px;
+}
+.hero-image img {
+  width: 100%;
+  height: 500px;
+}
+p {
+  font-size: 2em;
+  line-height: 3;
+  text-align: center; /* Alinea el texto al centro */
+  color: #4b9d98; /* Agrega color azul oscuro a las letras */
+  text-shadow: 1px 1px 2px #290d0d; /* Agrega un efecto de sombra al texto */
+}
+.greetings {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.greetings > span {
+  animation: glow 2.5s ease-in-out infinite;
+}
+.greetings {
+  text-align: center;
+  vertical-align: middle;
+}
+@keyframes glow {
+  0%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 12px #cc8b41, 0 0 50px #b5b821, 0 0 100px #e1b23c;
+  }
+  10%,
+  90% {
+    color: #a593c2;
+    text-shadow: none;
+  }
+}
+.greetings > span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.greetings > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.greetings > span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.greetings > span:nth-child(5) {
+  animation-delay: 0.8s;
 }
 
-footer {
+.contenedor {
   text-align: center;
 }
 
-a:active,
-:focus {
-  outline: 2px solid purple;
+button {
+  width: 250px; /* Establece el ancho del botón */
+  height: 100px; /* Establece el alto del botón */
+  padding: 20px 0; /* Reduce el relleno del botón */
+  margin: 30px 30px; /* Ajusta el margen para que los botones no estén tan juntos */
+  background-color: #ffa500;
   color: white;
-  background: purple;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px; /* Aumenta el tamaño de las letras */
+  font-weight: bold; /* Añade negrita a las letras */
 }
 
-.pies {
-  background: #23cfa7;
-  border-radius: 0.5em;
-  padding: 0.5em;
+button:hover {
+  background-color: #ff8c00;
 }
 
-.pies img {
-  border-radius: 0.25em;
-  border: 2px white solid;
+aside {
+  display: flex;
+  justify-content: center; /* Centra el contenido del aside */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Ajusta la dirección del contenedor para que los botones estén en columna */
+  align-items: center; /* Centra los botones en el contenedor */
+}
+footer {
+  clear: both;
+  text-align: left;
+}
+#mainfooter {
+  background-color: #a593c2;
 }
