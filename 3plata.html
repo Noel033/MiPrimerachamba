@@ -4,13 +4,14 @@
   <head>
     <meta charset="utf-8" />
     <title>Welcome to Bethany' Pie Shop 2!</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=0.25" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/pie-shop.css" />
   </head>
   <style>
     body {
-      background-image: url(/../../images/pattern.png);
+      background-image: url(images/pattern.png);
       font-family: sans-serif;
       margin: 0; /* Restablece el margen predeterminado del cuerpo */
     }
@@ -24,16 +25,17 @@
       justify-content: space-around;
       align-items: center;
       width: 100%; /* Ancho completo */
+      height: 300px;
       margin: 0; /* Margen superior e inferior a 0 */
       position: fixed; /* Fija el encabezado */
       top: 0; /* Posiciona en la parte superior */
       left: 0; /* Posiciona en el lado izquierdo */
-      z-index: 10; /* Asegura que el encabezado esté encima del contenido */
+      z-index: 1000px; /* Asegura que el encabezado esté encima del contenido */
     }
 
     .logo {
-      width: 100px;
-      height: 100px;
+      width: 250px;
+      height: 250px;
     }
 
     nav ul {
@@ -54,42 +56,47 @@
 
     #titulo {
       position: absolute;
-      top: 150px; /* Posiciona el título debajo del encabezado */
+      top: 350px; /* Posiciona el título debajo del encabezado */
       left: 50%;
+
       transform: translateX(-50%);
-      font-size: 50px; /* Tamaño de la letra del título */
+      font-size: 70px; /* Tamaño de la letra del título */
       color: #a593c2;
     }
     .hero {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 100px; /* Espacio entre el encabezado y la imagen */
+      margin-top: 1px; /* Espacio entre el encabezado y la imagen */
     }
     .hero-content {
       text-align: center;
     }
     .hero-image {
       width: 90%;
-      margin-top: 20px;
+
+      margin-top: 30px;
     }
     .hero-image img {
       width: 100%;
-      height: 100px;
+      height: 1000px;
     }
     p {
-      font-size: 2em;
-      line-height: 3;
-      text-align: center; /* Alinea el texto al centro */
+      line-height: 1;
+      text-align: left; /* Alinea el texto al centro */
       color: #4b9d98; /* Agrega color azul oscuro a las letras */
-      text-shadow: 1px 1px 2px #290d0d; /* Agrega un efecto de sombra al texto */
     }
     .greetings {
-      font-size: 3rem;
-      font-weight: 900;
+      font-size: 95px;
+      font-weight: 1500;
+    }
+
+    .greetings {
+      letter-spacing: -2px;
+      white-space: nowrap;
     }
     .greetings > span {
-      animation: glow 2.5s ease-in-out infinite;
+      animation: glow 1s ease-in-out infinite;
     }
     .greetings {
       text-align: center;
@@ -125,17 +132,17 @@
     }
 
     button {
-      width: 250px; /* Establece el ancho del botón */
-      height: 100px; /* Establece el alto del botón */
+      width: 900px; /* Establece el ancho del botón */
+      height: 300px; /* Establece el alto del botón */
       padding: 20px 0; /* Reduce el relleno del botón */
-      margin: 30px 30px; /* Ajusta el margen para que los botones no estén tan juntos */
-      background-color: #ffa500;
+      margin: 3px 5px; /* Ajusta el margen para que los botones no estén tan juntos */
+      background-color: #e04c11;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      font-size: 18px; /* Aumenta el tamaño de las letras */
+      font-size: 90px; /* Aumenta el tamaño de las letras */
       font-weight: bold; /* Añade negrita a las letras */
     }
 
@@ -170,9 +177,9 @@
 
   <body>
     <header>
-      <img src="../images/cake.svg" alt="Pie Logo" class="logo" id="logo" />
+      <img src="images/cake.svg" alt="Pie Logo" class="logo" id="logo" />
       <audio id="audio" loop>
-        <source src="../audio/terreineitor.mp3" type="audio/mp3" />
+        <source src="audio/terreineitor.mp3" type="audio/mp3" />
         <span style="display: none"
           >Tu navegador no soporta el elemento audio.</span
         >
@@ -193,13 +200,13 @@
       <nav>
         <ul>
           <li style="margin-right: 200px">
-            <a href="../index.html" style="font-size: 35px">Home</a>
+            <a href="index.html" style="font-size: 70px">Home</a>
           </li>
           <li style="margin-right: 200px">
-            <a href="../pages/allpies.html" style="font-size: 35px">All Pies</a>
+            <a href="2plata.html" style="font-size: 70px">All Pies</a>
           </li>
           <li>
-            <a href="../pages/contacto.html" style="font-size: 35px">About</a>
+            <a href="3plata.html" style="font-size: 70px">About</a>
           </li>
         </ul>
       </nav>
@@ -223,8 +230,8 @@
         <span>r</span>
       </div>
     </h2>
-    <main>
-      <section class="hero">
+    <main class="hero">
+      <section>
         <div
           class="hero-image"
           style="
@@ -264,37 +271,52 @@
         tabindex="0"
       ></iframe>
     </main>
-    <aside>
-      <div class="container">
-        <div>
-          <img src="/../../images/bethanylogo.png" />
-        </div>
-        <div class="greetings">
-          <span>B</span>
-          <span>r</span>
-          <span>o</span>
-          <span>w</span>
-          <span>s</span>
-          <span>e</span>&nbsp;&nbsp;
-          <span>o</span>
-          <span>u</span>
-          <span>r</span>&nbsp;&nbsp;
-          <span>P</span>
-          <span>i</span>
-          <span>e</span>
-          <span>s</span>
-        </div>
-        <a href="../pages/allpies.html"><button>All Pies</button></a>
-        <a href="../pages/contacto.html"><button>Cheese Pies</button></a>
-        <a href="../index.html"><button>Fruit Pies</button></a>
-        <a href="../pages/allpies.html"><button>Promotions</button></a>
+    <div class="container">
+      <div>
+        <img src="images/bethanylogo.png" width="850" height="849" />
       </div>
-    </aside>
+      <br />
+      <div class="greetings">
+        <span>B</span>
+        <span>r</span>
+        <span>o</span>
+        <span>w</span>
+        <span>s</span>
+        <span>e</span>&nbsp;&nbsp;
+        <span>o</span>
+        <span>u</span>
+        <span>r</span>&nbsp;&nbsp;
+        <span>P</span>
+        <span>i</span>
+        <span>e</span>
+        <span>s</span>
+      </div>
+      <div><br /></div>
+      <div><br /></div>
+      <div><br /></div>
+      <div><br /></div>
+      <div><br /></div>
+      <div><br /></div>
+      <a href="2plata.html"><button>All Pies</button></a>
+      <a href="3plata.html"><button>Cheese Pies</button></a>
+      <a href="index.html"><button>Fruit Pies</button></a>
+      <a href="2plata.html"><button>Promotions</button></a>
+    </div>
+
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+
     <footer id="mainfooter" style="padding-left: 110px">
+      <br />
       <h4>Nuestra dirección</h4>
       <address>Av La Fontana S/N- La Molina</address>
-      <small>Contact is via email</small>
+      <small
+        >Contact is via email
+        <a href="https://mail.google.com" target="_blank">email</a></small
+      >
       <small>@2024 FIA-All rights reserved</small>
+      <div><br /></div>
     </footer>
   </body>
 </html>
